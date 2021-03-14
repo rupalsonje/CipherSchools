@@ -14,18 +14,19 @@
             <ul class="menu">
                 <li><a href="#home"  onclick="toggleMenu()">Home</a></li>
                 <li><a href="#about"  onclick="toggleMenu()">About Me</a></li>
-                <li><a href="#services" onclick="toggleMenu()">Work</a></li>
-                <li><a href="#work"  onclick="toggleMenu()">Technical Skills</a></li>
-                <li><a href="#testimonial"  onclick="toggleMenu()">Other Activites</a></li>
+                <li><a href="#work" onclick="toggleMenu()">Work</a></li>
+                <li><a href="#skills"  onclick="toggleMenu()">Technical Skills</a></li>
+                <li><a href="#other"  onclick="toggleMenu()">Other Activites</a></li>
                 <li><a href="#contact"  onclick="toggleMenu()">Contact Me</a></li>
             </ul>
     </header>
 
     <section class="banner" id="home">
+        <div id="particles-js"></div>
         <div class="textBox">
             <h2>Hello, I am <br> <span>Rupal Sonje.</span></h2>
             <h3>I am Full Stack Developer.</h3>
-            <a href="#about" class="btn">About Me</a>
+            <a href="#contact" class="btn">Contact Me</a>
         </div>
     </section>
 
@@ -43,5 +44,8 @@
         menu.classList.toggle('active');
     }
     </script>
+
+    <script src="particle/particles.js"></script>
+    <script src="particle/app.js"></script>
 </body>
 </html>
