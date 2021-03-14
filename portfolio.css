@@ -9,7 +9,7 @@
 }
 body{
     background-color: #F3EBF6;
-
+    font-family: Arvo,sans-serif;
 }
 header{
     position: fixed;
@@ -34,7 +34,11 @@ header .logo {
     text-transform: uppercase;
     text-decoration: none;
     font-weight: 700;
+    font-family: Ubuntu, sans-serif;
     letter-spacing: 2px;
+}
+header .logo:hover{
+    color:#2196f3;
 }
 header.sticky .logo{
     color: #111;
@@ -100,4 +104,92 @@ section{
     font-size: 18px;
     font-weight: 500;
     letter-spacing: 2px;
+}
+
+.btn:hover{
+    background-color: #153e90;
+}
+
+@media (max-width:991px){
+    header,
+    header.sticky{
+        padding: 20px 50px;
+        z-index: 100;
+    }
+    
+    .menu{
+        position: fixed;
+        top:69px;
+        left: -100%;
+        display: block;
+        padding: 100px 50px;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        transition: 0.5s;
+        z-index: 99;
+        border-top: 1px solid rgba(0,0,0,0.3);
+    }
+    .menu.active{
+        left: 0;
+    }
+    header ul li a{
+        color: #111;
+        font-size: 24px;
+        margin: 10px;
+    }
+    .toggle{
+        width: 40px;
+        background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7I-PNtoXZMY2Nfoej-21Zq-ZTceIQUXufjg&usqp=CAU);
+        height: 40px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        cursor: pointer;
+    }
+    .toggle.active{
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm9f9E4rqtltMUC9svIhY0kElfMCZfDSbKqQ&usqp=CAU);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 25px;
+    cursor: pointer;
+    }
+    header.sticky .toggle{
+        filter: invert(1);
+    }
+    section{
+        padding: 100px 50px;
+    }
+    .banner{
+        padding: 150px 50px 100px;
+    }
+    .banner h2{
+        font-size: 1.5em;
+    }
+    .banner h3{
+        font-size: 1em;
+    }
+    .btn{
+        margin-top: 10px;
+        padding: 10px 20px;;
+        font-size: 14px;
+    }
+}
+
+img{
+    max-width: 100%;
+}
+
+@media (max-width:600px){
+    header,
+    header.sticky{
+        padding: 20px 20px;
+    }
+    .banner {
+        padding: 150px 20px 100px;
+    }
+    section {
+        padding: 100px 20px;
+    }
 }
