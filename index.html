@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="main">
+        <p class="sign" style="text-align:center;">Sign in</p>
+            <form class="form1" method="POST" action="login.php">
+                <input class="un " type="text" name="username" style="text-align:center;" placeholder="Username">
+                <p class="error" style="text-align:center;"></p>
+                <input id="pwd" class="pass" name="pass" type="password" required style="text-align:center;" placeholder="Password" >
+
+                <!--      Show/hide password  -->
+                <span>
+                    <i class="fas fa-eye white" aria-hidden="true"  type="button" id="eye"></i>
+                </span>
+
+                <p class="error" style="text-align:center;"></p>
+                <button type="submit" name="submit" class="submit"><a href="portfolio.html" style="text-align:center;" name="submit" >Sign in</a></button>
+                <p class="forgot" style="text-align:center;"><a href="">Forgot Password?</p>
+            </form>            
+        </div>
+        
+        <script>
+        function show() {
+            var p = document.getElementById('pwd');
+            var eye = document.getElementById('eye');
+            p.setAttribute('type', 'text');
+            eye.classList.add('black');
+            eye.classList.remove('white');    
+        }
+    
+        function hide() {
+            var eye = document.getElementById('eye');
+            var p = document.getElementById('pwd');
+            p.setAttribute('type', 'password');
+            eye.classList.remove('black');
+            eye.classList.add('white');
+        }
+    
+        var pwShown = 0;
+    
+        document.getElementById("eye").addEventListener("click", function () {
+            if (pwShown == 0) {
+                pwShown = 1;
+                show();
+            } else {
+                pwShown = 0;
+                hide();
+            }
+        }, false);
+
+    </script>
+</body>
+</html>

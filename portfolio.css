@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+* {
+    font-family: 'Ubuntu', sans-serif;
+    scroll-behavior: smooth;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+body{
+    background-color: #F3EBF6;
+
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding:40px 100px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+header.sticky{
+    background: white;
+    padding: 20px 100px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+header .logo {
+    color: white;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+header.sticky .logo{
+    color: #111;
+}
+header ul{
+    position: relative;
+    display: flex;
+}
+header ul li{
+    position: relative;
+    list-style: none;
+}
+header ul li a {
+    position: relative;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+} 
+header.sticky ul li a{
+    color: #111;
+}
+
+
+section{
+    padding: 100px;
+}
+.banner {
+    position: relative;
+    min-height: 100vh;
+    background:#000;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.banner h2{
+    font-size: 3em;
+    color: white;
+    font-weight: 500;
+    line-height: 1.5em;
+}
+.banner h2 span{
+    font-size: 1.5em;
+    font-weight: 700;
+}
+.banner h3{
+    font-size: 1.5em;
+    color: white;
+    font-weight: 500;
+}
+.btn{
+    position: relative;
+    color: #fff;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 30px;
+    background:#2196f3;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
